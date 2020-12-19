@@ -1,0 +1,79 @@
+extends ../layout
+
+block content
+    // ★★★ Tab Menu
+    ul(class="nav nav-tabs" style="margin-bottom: 15px;")
+        li
+            a(href="#joined" data-toggle="tab") 가입 커뮤니티
+        li.active
+            a(href="#unjoinded" data-toggle="tab") 전체 커뮤니티
+    // ★★★ Tab Panel
+    #communityList.tab-content
+        // ★★★ 가입 커뮤니티
+        #joined(class="tab-pane fade")
+            .page-header
+                h2#container 가입 커뮤니티
+            ul.list-group
+            //-
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4
+                        a(href="/club") 건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(type="button") 멤버탈퇴 신청하기
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4
+                        a(href="/club") 건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(type="button") 멤버탈퇴 신청하기
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4
+                        a(href="/club") 건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(type="button") 멤버탈퇴 신청하기
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4
+                        a(href="/club") 건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(type="button") 멤버탈퇴 신청하기
+            button.btn.btn-default.btn-lg.btn-block(type="button") 커뮤니티 목록 더보기
+        // ★★★ 미가입 커뮤니티
+        #unjoinded.tab-pane.fade.active.in
+            .page-header
+                h2#container 미가입 커뮤니티
+            ul.list-group
+                each community in communities
+                    li.list-group-item
+                        span.badge 2011.03.21
+                        h4 #{community.getName()} (회원:#{community.getMemberCount()})
+                        p #{community.getDesc()}
+                        button.btn.btn-default.btn-sm(onclick="location.href='/community/join?id=#{community.getId()}'") 멤버 가입하기
+            //-
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4
+                        span.label.label-info 추천
+                        &nbsp;건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(onclick="location.href='/community/join'") 멤버 가입하기
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4
+                        span.label.label-warning 인기
+                        &nbsp;건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(onclick="location.href='/community/join'") 멤버 가입하기
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4 건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(onclick="location.href='/community/join'") 멤버 가입하기
+                li.list-group-item
+                    span.badge 2011.03.21
+                    h4 건강 커뮤니티 (회원:59)
+                    p 전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.전국민 건강 프로젝트를 진행 중인 커뮤니티입니다. 각종 구기종목 및 헬스 관련 클럽이 있습니다.
+                    button.btn.btn-default.btn-sm(onclick="location.href='/community/join'") 멤버 가입하기
+            button.btn.btn-default.btn-lg.btn-block(type="button") 커뮤니티 목록 더보기

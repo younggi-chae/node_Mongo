@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    .page-header
+        h2#container 로그인
+    .well
+        p 아래 질문 내용들을 정성껏 작성해 주세요.
+        form.form-horizontal(action="/community/loginOk" method="post")
+            fieldset
+                .form-group
+                    label.col-lg-2.control-label 이메일을 입력해 주세요
+                    .col-lg-10
+                        input.form-control(type="text" name="email" placeholder="hong@nextree.co.kr")
+                .form-group
+                    label.col-lg-2.control-label 비밀번호를 입력하세요.
+                    .col-lg-10
+                        input.form-control(type="password" name="password")
+                .form-group
+                    .col-lg-10.col-lg-offset-2
+                        button.btn.btn-primary(type="submit") 확인
+                        button.btn.btn-default 취소

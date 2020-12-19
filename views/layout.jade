@@ -1,0 +1,13 @@
+doctype html
+html(lang="ko")
+    include ./includes/head
+    body
+        include ./includes/navigation
+        include ./includes/header
+        // Container =======================================================================================
+        div.container
+            div.row
+                div.col-lg-12
+                    block content
+            include ./includes/footer
+        include ./includes/scripts

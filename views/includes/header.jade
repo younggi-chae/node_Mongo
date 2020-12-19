@@ -1,0 +1,22 @@
+// Header ==========================================================================================
+header
+    div.container
+        div.row
+            div.col-lg-12
+                div.jumbotron
+                    if community
+                        h1 #{community.getName()}
+                        p #{community.getDesc()}
+                    else
+                        h1 나무 커뮤니티와 함께!
+                        p 나무 커뮤니티와 함께 특정 취미와 관심사, 특정 그룹 또는 조직에 관한 대화를 시작하세요.
+                    if !skipOpenButton
+                        p
+                            a(href="/community/open" class="btn btn-warning btn-lg") 커뮤니티 개설하기
+        if community
+            div.row
+                div.col-sm-12.col-lg-12
+                    ol.breadcrumb
+                        li
+                            a(href="#") Home
+                        li.active #{community.getName()}

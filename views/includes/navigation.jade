@@ -1,0 +1,41 @@
+// Main Navigation ==========================================================================================
+div(class="navbar navbar-default navbar-fixed-top")
+    div(class="container")
+        div(class="navbar-header")
+            button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a(class="navbar-brand" href="/community")
+        div(class="navbar-collapse collapse navbar-responsive-collapse")
+            ul(class="nav navbar-nav")
+                li.active
+                    a(href="/community") 커뮤니티 홈
+                li
+                    a(href="#") 인기 커뮤니티
+                li
+                    a(href="#") 랭킹
+                li
+                    a(href="#") 공지사항
+            ul(class="nav navbar-nav navbar-right")
+                li
+                    a(href="/community/login") 로그인
+                li.dropdown
+                    a(href="#" class="dropdown-toggle" data-toggle="dropdown") 관리
+                    ul.dropdown-menu
+                        li
+                            a(href="../management/commMemberList.html") 커뮤니티 관리센터
+                        li
+                            a(href="../management/clubMemberList.html") 클럽 관리센터
+                        li
+                            a(href="../management/teamMemberList.html") 팀 관리센터
+                        li.divder
+                        li
+                            a(href="#") 홍보
+                li.dropdown
+                    a(href="#" class="dropdown-toggle" data-toggle="dropdown") 설정
+                    ul.dropdown-menu
+                        li
+                            a(href="#") 개인정보
+                        li
+                            a(href="#") 모바일 환경설정

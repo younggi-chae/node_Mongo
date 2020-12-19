@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    .page-header
+        h2#container 커뮤니티 멤버 가입하기
+    .well
+        p 아래 질문 내용들을 정성껏 작성해 주세요.
+        form.form-horizontal(action="/community/member" method="post")
+            input(type="hidden" name="communityId" value="#{community.getId()}")
+            fieldset
+                .form-group
+                    label.col-lg-2.control-label 이름을 입력하세요.
+                    .col-lg-10
+                        input.form-control(type="text" name="name" placeholder="홍길동")
+                .form-group
+                    label.col-lg-2.control-label 이메일 주소를 입력하세요.
+                    .col-lg-10
+                        input.form-control(type="text" name="email" placeholder="hong@nextree.co.kr")
+                .form-group
+                    label.col-lg-2.control-label 비밀번호를 입력하세요.
+                    .col-lg-10
+                        input.form-control(type="password" name="password")
+                .form-group
+                    .col-lg-10.col-lg-offset-2
+                        button.btn.btn-primary(type="submit") 확인
+                        button.btn.btn-default 취소

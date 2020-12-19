@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    .page-header
+        h2#container 커뮤니티 개설하기
+    .well
+        p 나와 같은 관심사를 가진 멤버를 모집하고 열심히 운영하여 커뮤니티를 성장시켜 보세요.
+        form.form-horizontal(action="/community" method="post")
+            fieldset
+                .form-group
+                    label.col-lg-2.control-label 커뮤니티명
+                    .col-lg-10
+                        input#name.form-control(type="text" name="name" placeholder="커뮤니티명")
+                .form-group
+                    label.col-lg-2.control-label(for="textArea") 커뮤니티 대표문구
+                    .col-lg-10
+                        textarea#desc.form-control(rows="3" name="desc")
+                        span.help-block 커뮤니티를 소개하는 대표문구를 입력해 주세요. 커뮤니티 홈화면에 입력하신 문구가 출력됩니다.
+                .form-group
+                    .col-lg-10.col-lg-offset-2
+                        button.btn.btn-primary(type="submit") 확인
+                        button.btn.btn-default 취소
